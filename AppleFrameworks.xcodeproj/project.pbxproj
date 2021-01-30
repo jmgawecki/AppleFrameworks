@@ -15,6 +15,8 @@
 		EF78BA3525C5D26C003C1CAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF78BA1F25C5D26C003C1CAE /* Assets.xcassets */; };
 		EF78BA4125C5D2BD003C1CAE /* Framework.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF78BA4025C5D2BD003C1CAE /* Framework.swift */; };
 		EF78BA4225C5D2BD003C1CAE /* Framework.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF78BA4025C5D2BD003C1CAE /* Framework.swift */; };
+		EF78BA4F25C5D5CB003C1CAE /* FrameworkTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF78BA4E25C5D5CB003C1CAE /* FrameworkTitleView.swift */; };
+		EF78BA5025C5D5CB003C1CAE /* FrameworkTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF78BA4E25C5D5CB003C1CAE /* FrameworkTitleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,7 @@
 		EF78BA2E25C5D26C003C1CAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF78BA2F25C5D26C003C1CAE /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		EF78BA4025C5D2BD003C1CAE /* Framework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Framework.swift; sourceTree = "<group>"; };
+		EF78BA4E25C5D5CB003C1CAE /* FrameworkTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkTitleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,7 @@
 				EF78BA1E25C5D26B003C1CAE /* FrameworkGridView.swift */,
 				EF78BA4025C5D2BD003C1CAE /* Framework.swift */,
 				EF78BA1F25C5D26C003C1CAE /* Assets.xcassets */,
+				EF78BA4E25C5D5CB003C1CAE /* FrameworkTitleView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -191,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF78BA4F25C5D5CB003C1CAE /* FrameworkTitleView.swift in Sources */,
 				EF78BA3225C5D26C003C1CAE /* FrameworkGridView.swift in Sources */,
 				EF78BA4125C5D2BD003C1CAE /* Framework.swift in Sources */,
 				EF78BA3025C5D26C003C1CAE /* AppleFrameworksApp.swift in Sources */,
@@ -201,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF78BA5025C5D5CB003C1CAE /* FrameworkTitleView.swift in Sources */,
 				EF78BA3325C5D26C003C1CAE /* FrameworkGridView.swift in Sources */,
 				EF78BA4225C5D2BD003C1CAE /* Framework.swift in Sources */,
 				EF78BA3125C5D26C003C1CAE /* AppleFrameworksApp.swift in Sources */,

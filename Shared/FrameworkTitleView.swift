@@ -8,27 +8,22 @@
 import SwiftUI
 
 struct FrameworkTitleView: View {
-    var imageName:  String
-    var title:      String
+    var framework: Framework
     
     var body: some View {
         VStack {
-            Image(imageName)
+            Image(framework.imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 90, height: 90, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             
-            Text(title)
+            Text(framework.name)
                 .font(.title2)
                 .fontWeight(.semibold)
                 .scaledToFit()              /// Will shrink if neeeded
                 .minimumScaleFactor(0.6)    /// But only down to 60%
         }
+        .padding()
     }
 }
 
-struct GridElement_Previews: PreviewProvider {
-    static var previews: some View {
-        FrameworkTitleView(imageName: "arkit", title: "Arkit")
-    }
-}

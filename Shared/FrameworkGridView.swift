@@ -9,31 +9,31 @@ import SwiftUI
 
 struct FrameworkGridView: View {
     
-    let columns: [GridItem] = [GridItem(.flexible()),
-                               GridItem(.flexible()),
-                               GridItem(.flexible()),] /// .flexible - based on how many columns you have, its gonna fill that screen
+    @StateObject var viewModel = ViewModel()
     
     var body: some View {
-        LazyVGrid(columns: columns, content: {
-            FrameworkTitleView(imageName: "arkit", title: "Arkit")
-            FrameworkTitleView(imageName: "arkit", title: "Arkit")
-            FrameworkTitleView(imageName: "arkit", title: "Arkit")
-            FrameworkTitleView(imageName: "arkit", title: "Arkit")
-            FrameworkTitleView(imageName: "arkit", title: "Arkit")
-            FrameworkTitleView(imageName: "arkit", title: "Arkit")
-            FrameworkTitleView(imageName: "arkit", title: "Arkit")
-            FrameworkTitleView(imageName: "arkit", title: "Arkit")
-            FrameworkTitleView(imageName: "arkit", title: "Arkit")
-            FrameworkTitleView(imageName: "arkit", title: "Arkit")
-
-
-        })
-        
+        NavigationView {
+            ScrollView {
+                LazyVGrid(columns: viewModel.columns, content: {
+                    ForEach(MockData.frameworks) { framework in
+                        FrameworkTitleView(framework: framework)
+                            .onTapGesture {
+                                viewModel.selectedFramework = framework
+                            }
+                    }
+                })
+            }
+            .navigationTitle("🍏 Frameworks")
+            .sheet(isPresented: $viewModel.isShowingDetail, content: {
+                FrameworkDetailedView(isShowingDetailView: $viewModel.isShowingDetail, framework: viewModel.selectedFramework!)
+            })
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         FrameworkGridView()
+            .preferredColorScheme(.dark)
     }
 }
